@@ -119,6 +119,9 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# aws credentials
+secrets.yaml
+
 # Environments
 .env
 .venv
@@ -151,6 +154,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# artifacts
+artifacts/data_ingestion/
+artifacts/data_transformation/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
