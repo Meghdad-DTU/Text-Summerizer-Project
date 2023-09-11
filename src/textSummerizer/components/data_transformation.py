@@ -10,8 +10,14 @@ class DataTransformation:
 
 
     
-    def convert_examples_to_features(self,example_batch):
-        input_encodings = self.tokenizer(example_batch['dialogue'] , max_length = 1024, truncation = True )
+    def convert_examples_to_features(self, example_batch):
+        if self.tokenizer in ["t5-small", "t5-base", "t5-large", "t5-3b", "t5-11b"]:
+            prefix = "summarize: "
+        else:
+            prefix = ""
+
+        inputs = [prefix + doc for doc in example_batch["dialogue"]]
+        input_encodings = self.tokenizer(inputs , max_length = 1024, truncation = True )
         
         with self.tokenizer.as_target_tokenizer():
             target_encodings = self.tokenizer(example_batch['summary'], max_length = 128, truncation = True )
@@ -25,5 +31,5 @@ class DataTransformation:
 
     def convert(self):
         dataset_samsum = load_from_disk(self.config.data_path)
-        dataset_samsum_pt = dataset_samsum.map(self.convert_examples_to_features, batched = True)
-        dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
+        dataset_samsum_tf = dataset_samsum.map(self.convert_examples_to_features, batched = True)
+        dataset_samsum_tf.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
