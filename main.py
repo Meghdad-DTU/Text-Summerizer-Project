@@ -8,7 +8,7 @@ from textSummerizer.pipeline.stage_04_model_trainer import ModelTrainingPipeline
 from textSummerizer.pipeline.stage_05_model_evaluation import ModelEvaluationPipeline
 
 
-'''STAGE_NAME = "Data Ingestion Stage"
+STAGE_NAME = "Data Ingestion Stage"
 
 try:
     logging.info(f'>>>>>>> {STAGE_NAME} started <<<<<<<<')
@@ -51,7 +51,7 @@ try:
     logging.info(f'>>>>>>> {STAGE_NAME} completed <<<<<<<<')
     
 except Exception as e:
-    raise CustomException(e, sys)'''
+    raise CustomException(e, sys)
 
 STAGE_NAME = "Model Evaluation Stage"
 
