@@ -29,3 +29,11 @@ class ModelTrainerConfig:
     weight_decay_rate: float
     learning_rate: float
     batch_size: int
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    data_path: Path
+    trained_model_path: Path
+    tokenizer_path:Path
+    metric_file_name: Path
