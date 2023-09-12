@@ -3,7 +3,8 @@ from textSummerizer.utils import read_yaml, create_directories
 from textSummerizer.entity.config_entity import (DataIngestionConfig, 
                                                  DataValidationConfig,
                                                  DataTransformationConfig,
-                                                 ModelTrainerConfig)
+                                                 ModelTrainerConfig,
+                                                 ModelEvaluationConfig)
 
 class configurationManeger:
     def __init__(self,
@@ -73,3 +74,19 @@ class configurationManeger:
         )
 
         return model_trainer_config
+    
+    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+        config = self.config.model_evaluation       
+
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir= config.root_dir,
+            data_path= self.config.data_transformation.data_path,
+            trained_model_path= config.trained_model_path,
+            tokenizer_path= config.tokenizer_path,
+            metric_file_name = config.metric_file_name
+            
+        )
+
+        return model_evaluation_config
