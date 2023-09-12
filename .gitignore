@@ -158,6 +158,7 @@ cython_debug/
 # artifacts
 artifacts/data_ingestion/
 artifacts/data_transformation/
+artifacts/model_trainer
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
