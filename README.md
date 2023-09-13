@@ -43,43 +43,45 @@ python app.py
 #### STEP 05- Open up you local host and port
 
 
+
+
 ### AWS-CICD-Deployment-with-Github-Actions
 
-#### 1. Login to AWS console
+#### STEP 01- Login to AWS console
 
-#### 2. Create IAM user for deployment
+#### STEP 02- Create IAM user for deployment
 
 Withe specific access
 
-- 1. EC2 access : It is virtual machine
+- 1- EC2 access : It is virtual machine
 
-- 2. ECR: Elastic Container registry to save your docker image in aws
+- 2- ECR: Elastic Container registry to save your docker image in aws
 
 
 Description: About the deployment
 
-- 1. Build docker image of the source code
+- 1- Build docker image of the source code
 
-- 2. Push your docker image to ECR
+- 2- Push your docker image to ECR
 
-- 3. Launch Your EC2 
+- 3- Launch Your EC2 
 
-- 4. Pull Your image from ECR in EC2
+- 4- Pull Your image from ECR in EC2
 
-- 5. Lauch your docker image in EC2
+- 5- Lauch your docker image in EC2
 
 Policy:
 
-- 1. AmazonEC2ContainerRegistryFullAccess
+- 1- AmazonEC2ContainerRegistryFullAccess
 
-- 2. AmazonEC2FullAccess
+- 2- AmazonEC2FullAccess
 
-#### 3. Create ECR repo to store/save docker image
+#### STEP 03- Create ECR repo to store/save docker image
 ```example >>  566373416292.dkr.ecr.ap-south-1.amazonaws.com/text-summarizer```
 
-#### 4. Create EC2 machine (Ubuntu)
+#### STEP 04- Create EC2 machine (Ubuntu)
 
-#### 5. Open EC2, connect and install docker in EC2 Machine
+#### STEP 05- Open EC2, connect and install docker in EC2 Machine
 ```bash
 #optinal
 
@@ -97,10 +99,10 @@ sudo usermod -aG docker ubuntu
 
 newgrp docker
 ```
-#### 6. Configure EC2 as self-hosted runner
+#### STEP 06- Configure EC2 as self-hosted runner
 ```setting>actions>runner>new self hosted runner> choose os> then run command one by one```
 
-#### 7. Setup github secrets
+#### STEP 07- Setup github secrets
 ```bash
 AWS_ACCESS_KEY_ID= ....
 
