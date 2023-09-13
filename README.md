@@ -14,20 +14,30 @@
 ### How to run?
 #### STEP 01- Clone the repository
 
-`https://github.com/Meghdad-DTU/Text-Summerizer-Project.git`
+```bash
+https://github.com/Meghdad-DTU/Text-Summerizer-Project.git
+```
 
 #### STEP 02- Create a python virtual environmet
 
-`virtualenv venv --python=python3.8`
+```bash
+virtualenv venv --python=python3.8
+```
 
-`Source venv/bin/activate`
+```bash
+Source venv/bin/activate
+```
 
 #### STEP 03- Install the requirements
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 #### STEP 04- Run the application
 
-`python app.py`
+```bash
+python app.py
+```
 
 #### STEP 05- Open up you local host and port
