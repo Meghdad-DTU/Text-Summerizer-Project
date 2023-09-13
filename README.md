@@ -1,6 +1,6 @@
 # Text-Summerizer-Project with Deploymnet
 
-### Workflows
+## Workflows
 
 - 1- Update config.yaml
 - 2- Update params.yaml
@@ -11,7 +11,7 @@
 - 7- Update the main.py
 - 8- Update the app.py
 
-### How to run?
+## How to run?
 #### STEP 01- Clone the repository
 
 ```bash
@@ -44,8 +44,7 @@ python app.py
 
 
 
-
-### AWS-CICD-Deployment-with-Github-Actions
+## AWS-CICD-Deployment-with-Github-Actions
 
 #### STEP 01- Login to AWS console
 
@@ -55,7 +54,7 @@ Withe specific access
 
 - 1- EC2 access : It is virtual machine
 
-- 2- ECR: Elastic Container registry to save your docker image in aws
+- 2- ECR: Elastic Container Registry to save your docker image in AWS
 
 
 Description: About the deployment
@@ -64,11 +63,11 @@ Description: About the deployment
 
 - 2- Push your docker image to ECR
 
-- 3- Launch Your EC2 
+- 3- Launch Your EC2 Machine
 
-- 4- Pull Your image from ECR in EC2
+- 4- Pull Your image from ECR in EC2 Machine
 
-- 5- Lauch your docker image in EC2
+- 5- Lauch your docker image in EC2 Machine
 
 Policy:
 
