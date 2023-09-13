@@ -22,7 +22,7 @@
 
 `Source venv/bin/activate`
 
-#### STEP 03- install the requirements
+#### STEP 03- Install the requirements
 
 `pip install -r requirements.txt`
 
@@ -30,4 +30,4 @@
 
 `python app.py`
 
-#### STEP 05- open up you local host and port
+#### STEP 05- Open up you local host and port
